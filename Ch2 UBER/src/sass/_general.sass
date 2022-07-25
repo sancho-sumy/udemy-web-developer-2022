@@ -41,7 +41,7 @@ nav
 		max-width: 100%
 		margin-top: 16px
 	&_official
-		font-weight: 100
+		font-weight: 400
 		font-size: 13px
 		color: $white_color
 		opacity: 0.5
@@ -62,12 +62,13 @@ nav
 	&_btn
 		width: 172px
 		height: 46px
+		margin-top: 21px
+
 
 .btn
 	background: linear-gradient(0deg, $magenta_color 0%, #4CE2FF 100%)
 	box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
 	border-radius: 4px
-	font-style: normal
 	font-weight: 400
 	font-size: 14px
 	text-align: center
@@ -75,9 +76,7 @@ nav
 	color: $white_color
 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
 	border: none
-	margin-top: 18px
 	+btn_hover
-	
 
 .promo
 	min-height: 800px
@@ -346,6 +345,8 @@ nav
 		transform: translateX(-50%)
 		z-index: -1
 		margin: 0
+		max-width: 100%
+		height: auto
 	.title
 		margin-top: 38px
 		line-height: 30px
@@ -469,3 +470,5 @@ footer .wrapper
 		justify-content: space-between
 		margin: 0
 		list-style-type: none
+.xs-visible 
+	display: none
