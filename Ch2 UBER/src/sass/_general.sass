@@ -205,6 +205,7 @@ nav
 		flex-wrap: wrap
 		width: 320px
 		height: 280px
+		margin: 0 auto
 		margin-bottom: 19px
 		padding-top: 90px
 		padding-bottom: 35px
@@ -279,12 +280,12 @@ nav
 		height: 450px
 		background: url("../img/choice_bg.png") center (center / cover) no-repeat
 		padding-top: 215px
-		.choice_text
-			font-weight: 300
-			font-size: 17px
-			line-height: 24px
-			text-align: center
-			color: #222222
+	.choice_text
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		text-align: center
+		color: #222222
 
 .require
 	padding: 90px 0 24px 0
@@ -373,58 +374,48 @@ footer
 	justify-content: space-between
 	align-items: center
 	padding: 0 25px 0 25px
-	.footer_socials
-		width: 155px
+	.socials
+		width: 25%
 		display: flex
-		justify-content: space-between
-
-footer .wrapper
-	width: 33%
-	height: 100%
-.socials
-	display: flex
-	justify-content: start
-	align-items: center
-.nav
-	display: flex
-	justify-content: center
-	align-items: flex-start
-	padding: 14px 0 40px 0
-.app
-	display: flex
-	justify-content: end
-	align-items: center
+		justify-content: start
+		align-items: center
+	.nav
+		width: 49%
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		padding: 14px 0 40px 0
+	.app
+		width: 25%
+		display: flex
+		justify-content: end
+		align-items: center
 
 .footer_socials
 	display: flex
 	justify-content: center
 	align-items: center
-	&_link
-		display: flex
-		justify-content: center
-		align-items: center
-		width: 32px
-		height: 32px
-		background-color: $black-color
-		border-radius: 100%
-		+link_hover_opacity
-		span
-			color: white
-
-
+	width: 32px
+	height: 32px
+	background-color: $black-color
+	border-radius: 100%
+	margin: 12px auto
+	+link_hover_opacity
+	span
+		display: block
+		color: white
 
 .footer_app_download
-	display: flex
-	justify-content: space-between
-	width: 294px
 	height: 26px
-	&_link
+	margin: 5px 0
+	a
 		width: 92px
 		height: 26px
+		display: block
+		margin: 0 auto
 		img
-			display: block
-			width: 92px
-			height: 26px
+			width: 100%
+			height: 100%
 		+link_hover_opacity
 
 .footer_nav
