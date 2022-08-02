@@ -3,20 +3,14 @@
     padding: 73px 0 65px 0;
     background: #f6f6f6;
     margin-bottom: 0;
-    &__title {
-        h2 {
-            font-weight: 700;
-            font-size: 30px;
-            margin-bottom: 0;
-        }
-        text-align: center;
-        color: #0d0d0d;
+    color: #000;
+    .title {
+        padding-bottom: 65px;
     }
     &__items {
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-        margin-top: 65px;
     }
     &__item {
         display: flex;
