@@ -41,12 +41,20 @@
     }
     &__content {
         margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
     }
     &-item {
         width: 300px;
         min-height: 440px;
         border: 2px solid #e8e8e8;
         padding: 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
         &__img {
             display: block;
             margin: 0 auto;
@@ -81,11 +89,14 @@
             }
         }
         hr {
+            background-color: #e8e8e8;
             margin: 17px 0;
+            border-bottom: none;
         }
         &__footer {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         &__old-price {
             font-weight: 300;
@@ -97,6 +108,71 @@
             font-weight: 700;
             font-size: 20px;
             line-height: 20px;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            transition: 0.5s all;
+            padding: 0 20px;
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+            ul {
+                flex: 0 1 auto;
+                list-style-type: none;
+                padding-left: 15px;
+            }
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 18px;
+                color: #555555;
+                margin-bottom: 10px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -17px;
+                    top: 8px;
+                }
+            }
+        }
+        &__back {
+            flex: 0 1 auto;
+            display: block;
+            margin: 0 auto;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $main-color;
+            padding: 0;
+            &:hover {
+                color: $main-color;
+            }
         }
     }
 }

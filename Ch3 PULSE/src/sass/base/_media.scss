@@ -1,6 +1,15 @@
 @media screen and (max-width: 1023px) {
     .container {
-        max-width: 95%;
+        max-width: 90%;
+    }
+    .prev,
+    .next {
+        display: none;
+    }
+    .catalog {
+        &__content {
+            justify-content: space-around;
+        }
     }
 }
 
