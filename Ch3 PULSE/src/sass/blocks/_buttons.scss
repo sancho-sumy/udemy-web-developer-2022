@@ -10,6 +10,7 @@
     line-height: 19px;
     text-transform: uppercase;
     color: #ffffff;
+    transition: 0.6s all;
     &_main {
         margin-top: 67px;
         width: 300px;
@@ -27,5 +28,12 @@
         font-size: 14px;
         width: 130px;
         height: 40px;
+    }
+    &:hover {
+        background: #ffffff;
+        color: $main_color;
+        transition: 0.6s all;
+        border: 2px solid $main_color;
+        transition: 0.6s all;
     }
 }
