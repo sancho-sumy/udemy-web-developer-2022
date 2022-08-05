@@ -52,4 +52,52 @@ $(document).ready(function () {
 
     toggleSlide(".catalog-item__link");
     toggleSlide(".catalog-item__back");
+
+    $("[data-modal=consultation]").on("click", function () {
+        $(".overlay, #consultation").fadeIn("slow");
+    });
+
+    $(".modal__close").on("click", function () {
+        $(".overlay, #order, #consultation, #thanks").fadeOut("slow");
+    });
+
+    $(".button_mini").each(function (i) {
+        $(this).on("click", function () {
+            $("#order .modal__descr").text($(".catalog-item__subtitle").eq(i).text());
+            $(".overlay, #order").fadeIn("slow");
+        });
+    });
+
+    $(".feed-form").each(function () {
+        $(this).validate({
+            rules: {
+                name: {
+                    required: true,
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    },
+                },
+                phone: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+            },
+            messages: {
+                name: "Пожалуйста, введите свое имя!",
+                phone: "Пожалуйста, введите свой телефон!",
+                email: {
+                    required: "Пожалуйста, введите свое имя!",
+                    email: "Неправильно введен адрес!",
+                },
+            },
+        });
+    });
+});
+
+let cleave = new Cleave("input[name=phone]", {
+    phone: true,
+    phoneRegionCode: "UA",
 });
