@@ -24,6 +24,16 @@
         width: 100%;
         height: 55px;
     }
+    &_mobile {
+        display: none;
+        font-size: 16px;
+        width: 100%;
+        height: 55px;
+        background: #fff;
+        border: 2px solid $main-color;
+        color: $main-color;
+        margin-top: 15px;
+    }
     &_mini {
         font-size: 14px;
         width: 130px;

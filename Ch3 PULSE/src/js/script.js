@@ -57,7 +57,7 @@ $(document).ready(function () {
         $(".overlay, #consultation").fadeIn("slow");
     });
 
-    $(".modal__close").on("click", function () {
+    $("[data-modal=modal_close]").on("click", function () {
         $(".overlay, #order, #consultation, #thanks").fadeOut("slow");
     });
 
@@ -79,6 +79,7 @@ $(document).ready(function () {
                 },
                 phone: {
                     required: true,
+                    minlength: 16,
                 },
                 email: {
                     required: true,
@@ -87,7 +88,10 @@ $(document).ready(function () {
             },
             messages: {
                 name: "Пожалуйста, введите свое имя!",
-                phone: "Пожалуйста, введите свой телефон!",
+                phone: {
+                    required: "Пожалуйста, введите свой телефон!",
+                    minlength: "Пожалуйста, проверьте правильность ввода!",
+                },
                 email: {
                     required: "Пожалуйста, введите свое имя!",
                     email: "Неправильно введен адрес!",
@@ -95,9 +99,35 @@ $(document).ready(function () {
             },
         });
     });
+    $("form").submit(function (e) {
+        e.preventDefault();
+        if (!$(this).valid()) {
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize(),
+        }).done(function () {
+            $(this).find("input").val("");
+            $("#consultation, #order").fadeOut("slow");
+            $(".overlay, #thanks").fadeIn("slow");
+            $("form").trigger("reset");
+        });
+        return false;
+    });
 });
 
-let cleave = new Cleave("input[name=phone]", {
-    phone: true,
-    phoneRegionCode: "UA",
-});
+$("input[name=phone]")
+    .toArray()
+    .forEach(function (field) {
+        new Cleave(field, {
+            phone: true,
+            phoneRegionCode: "UA",
+            prefix: "+380",
+            numericOnly: true,
+            blocks: [0, 2, 3, 4],
+            delimiters: ["(", ") ", "-"],
+            noImmediatePrefix: true,
+        });
+    });
