@@ -1,0 +1,13 @@
+.nav-top {
+    display: block;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-decoration: none;
+    color: $main-color;
+    font-size: 40px;
+    line-height: 40px;
+    &:hover {
+        color: $main-color;
+    }
+}

@@ -4,6 +4,10 @@
     font-family: "Museo Sans Cyrl", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     position: relative;
     max-width: 950px;
@@ -33,5 +37,9 @@
 @import "blocks/footer";
 
 @import "blocks/modal";
+
+@import "blocks/navtop";
+
+@import "blocks/map";
 
 @import "base/media";

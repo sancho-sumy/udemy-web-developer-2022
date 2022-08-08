@@ -23,6 +23,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-circle-up:before {
+    content: "\e903";
+}
 .icon-facebook:before {
     content: "\e900";
 }
@@ -31,4 +34,7 @@
 }
 .icon-pinterest:before {
     content: "\e902";
+}
+.icon-circle-up:before {
+    content: "\ea41";
 }
