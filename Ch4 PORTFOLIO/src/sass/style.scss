@@ -15,8 +15,16 @@
     margin: 0 auto;
 }
 
+.separator {
+    width: 60px;
+    height: 0px;
+    border-top: 3px solid #FFA501;
+}
+
 @import 'blocks/promo';
 @import 'blocks/titles';
 @import 'blocks/buttons';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
+@import 'blocks/about';
+@import 'blocks/resume';

@@ -37,7 +37,6 @@
     }
     &__block {
         position: relative;
-        // left: -100%;
         width: 345px;
         height: 100%;
         background: $main-color;
@@ -92,6 +91,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        & img {
+            transform: rotate(90deg);
+        }
     }
     &__overlay {
         position: fixed;

@@ -10,7 +10,22 @@
         font-size: 16px;
         line-height: 24px;
     }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &_fz36 {
+        font-size: 36px;
+        line-height: 60px;
+    }
     &_fz48 {
         font-size: 48px;
     }
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before_circle
+    }
+    
 }
