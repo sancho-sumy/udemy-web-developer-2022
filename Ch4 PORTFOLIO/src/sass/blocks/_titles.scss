@@ -2,6 +2,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 60px;
+    margin: 0;
     &_fz14 {
         font-size: 14px;
         line-height: 21px;
@@ -23,9 +24,20 @@
     }
     &__subtitle {
         position: relative;
-        padding-left: 10px;
+        padding-left: 15px;
         z-index: 2;
         @include before_circle
     }
-    
+    &__section-title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }  
+    }
+    &__section-subtitle {
+        text-align: center;
+    }
 }
