@@ -5,9 +5,10 @@
     }
     &__wrapper-list {
         display: grid;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-content: space-between;
         grid-template: repeat(2, 270px) / repeat(4, 270px);
+        grid-auto-rows: 270px;
         column-gap: 13px;
         row-gap: 13px;
         margin-top: 60px;
